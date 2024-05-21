@@ -1,0 +1,130 @@
+@import "@yaireo/tagify/dist/tagify.css";
+
+$padding: 1.5rem;
+
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;
+  background: #f5f5f5;
+}
+
+#app {
+  > * {
+    padding: 0 $padding;
+  }
+}
+
+body .tagify {
+  margin-bottom: 3em;
+  --tag-bg: #6c0e42;
+  --tag-text-color: white;
+  --tag-text-color--edit: var(--tag-bg);
+  --tag-hover: rgb(162, 8, 56);
+  --tag-remove-btn-color: white;
+}
+
+header {
+  color: white;
+  background: #111;
+  background: linear-gradient(145deg, rgb(162, 8, 56) 0%, rgb(54, 20, 75) 100%);
+
+  text-align: center;
+  margin-bottom: 2em;
+  padding: $padding !important;
+  border-bottom: 1px solid #ccc;
+
+  h1 {
+    margin: 0 0 1em;
+  }
+  a {
+    color: inherit;
+    font-style: italic;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 0.22em;
+    margin: -0.22em;
+  }
+  a:hover {
+    background: rgba(white, 0.12);
+  }
+}
+
+nav {
+  > a {
+    color: white;
+    margin: 0 1em;
+    padding: 0.8em;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .active {
+    background: rgba(black, 0.25);
+  }
+}
+
+h2 {
+  margin: 0 0 1em 0;
+}
+
+.clearAllBtn {
+  float: right;
+  margin-bottom: 0.5em;
+  margin-right: $padding;
+  + div {
+    clear: both;
+  }
+}
+
+.myTags {
+  width: 500px;
+  margin-top: 50px;
+}
+
+.tagify__dropdown.extra-properties .tagify__dropdown__item > img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  transform: scale(0.75);
+  margin-right: 5px;
+  border-radius: 2px;
+  transition: 0.12s ease-out;
+}
+
+.tagify__dropdown.extra-properties .tagify__dropdown__item:hover > img {
+  transform: none;
+  margin-right: 12px;
+}
+
+.tagify.countries .tagify__input {
+  min-width: 175px;
+}
+
+.tagify.countries tag {
+  white-space: nowrap;
+}
+.tagify.countries tag img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  margin-right: 3px;
+  border-radius: 2px;
+}
+
+.tag_container {
+  display: flex;
+  align-items: center;
+  // gap: 10px;
+}
